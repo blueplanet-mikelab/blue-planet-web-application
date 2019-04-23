@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import { Select, DatePicker, Button } from 'antd';
 import countrylist from 'country-list';
 import Background from '../../images/map.png';
@@ -49,10 +50,15 @@ class Searchmini extends Component {
                     // onFocus={handleFocus}
                     // onBlur={handleBlur}
                     >
-                        {countrylist.getNames().map(name => <Option key={name} value={name}>{name}</Option>)}
+                        {countrylist.getNames().map(name => <Option
+                            key={name}
+                            value={name}
+                        >
+                            {name}
+                        </Option>)}
 
                     </Select> &nbsp;&nbsp;
-                    <MonthPicker placeholder="Select month" onChange={this.onChange} value={this.state.month} />&nbsp;&nbsp;
+                    <MonthPicker placeholder="Select month" onChange={this.onChange} value={moment(this.state.month)} />&nbsp;&nbsp;
 
                     <Button icon="search" onClick={this.onClick} style={{ background: '#E26740', color: '#FFFFFF' }}>Explore</Button>
                 </div>
