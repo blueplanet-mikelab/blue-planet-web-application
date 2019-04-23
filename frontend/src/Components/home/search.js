@@ -55,6 +55,8 @@ class Search extends Component {
                     <MonthPicker placeholder="Select month" onChange={this.onChange} value={this.state.month} /> &nbsp;&nbsp;
 
                     <Button icon="search" onClick={this.onClick} style={{ background: '#E26740', color: '#FFFFFF' }}>Explore</Button>
+
+                    
                 </div>
             </div>
 

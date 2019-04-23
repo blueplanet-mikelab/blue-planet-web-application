@@ -9,6 +9,7 @@ import Register from './Components/register/register'
 import Login from './Components/login/login'
 import Dashboard from './Components/dashboard/dashboard'
 import PrivateRoute from './Components/private-route/privateRoute';
+import AddThread from './Components/thread/addThread';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
 
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/add" component={AddThread} />
 
           <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />

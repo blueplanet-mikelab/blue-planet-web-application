@@ -58,11 +58,26 @@ class Duration extends Component {
             value: e.target.value,
         });
     }
-
     render() {
+        const {data} = this.state
+        const topCountries =   [...Array(10).keys()].map(function(i){
+            if (data.length === 0) {
+                return ""
+            }
+            return JSON.parse(data.topCountries)[i].tags
+        })
+    
+        console.log(topCountries)
         return (
             <div style={{ marginLeft: '110px', marginRight: '110px' }}>
+
                 <h4>Duration</h4>
+               {topCountries}
+{/*                    
+                  {  [...Array(10).keys()].map(function(i){
+                        return JSON.parse(this.state.data.topCoutries)[i].tags
+                    })
+                } */}
 
                 <Slider marks={marks} step={null} defaultValue={0} />
 
@@ -70,6 +85,7 @@ class Duration extends Component {
                 <Carousel effect="fade">
                     <div><h3>
                         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
+
                             <Card
                                 hoverable
                                 style={{ width: 200, height: 190, marginRight: '10px' }}
