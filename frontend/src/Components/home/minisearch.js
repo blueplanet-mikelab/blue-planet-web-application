@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import moment from 'moment';
-import { Select, DatePicker, Button } from 'antd';
+import { Select, DatePicker, Button, Input } from 'antd';
 import countrylist from 'country-list';
 import Background from '../../images/map.png';
 
@@ -15,6 +14,7 @@ class Searchmini extends Component {
         this.state = {
             month: '',
             country: '',
+            // input: '',
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -34,7 +34,7 @@ class Searchmini extends Component {
     }
 
     onClick = () => {
-
+        console.log(this.state)
     }
 
     render() {
@@ -45,7 +45,6 @@ class Searchmini extends Component {
                         showSearch
                         style={{ width: 200 }}
                         placeholder="Select a country"
-                        optionFilterProp="children"
                         onChange={this.handleChange}
                     // onFocus={handleFocus}
                     // onBlur={handleBlur}
@@ -58,7 +57,9 @@ class Searchmini extends Component {
                         </Option>)}
 
                     </Select> &nbsp;&nbsp;
-                    <MonthPicker placeholder="Select month" onChange={this.onChange} value={moment(this.state.month)} />&nbsp;&nbsp;
+                    <MonthPicker placeholder="Select month" onChange={this.onChange} />&nbsp;&nbsp;
+
+                    {/* <Input onChange={e => { this.setState({ input: e.target.value }) }} /> */}
 
                     <Button icon="search" onClick={this.onClick} style={{ background: '#E26740', color: '#FFFFFF' }}>Explore</Button>
                 </div>

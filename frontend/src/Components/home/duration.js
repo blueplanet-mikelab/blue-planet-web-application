@@ -63,9 +63,9 @@ class Duration extends Component {
     }
 
     createCard = () => {
-        // console.log(this.state.data[0])
+
         const { data } = this.state
-        
+
         if (data.length === 0) {
             return ""
         }
@@ -74,7 +74,6 @@ class Duration extends Component {
             return <div>{data[i].tags}<br /></div>
         })
 
-    
         let parent = []
         for (let i = 0; i < 5; i++) {
             let children = []

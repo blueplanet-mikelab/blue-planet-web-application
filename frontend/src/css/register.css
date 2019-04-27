@@ -1,17 +1,12 @@
-/* div {
-    margin-left:15%; 
-    margin-right: 15%; 
+.register-container {
+    margin-left:20%; 
+    margin-right: 20%; 
     padding-top: 3px; 
     padding-bottom: 3px;
-    background-color: #f8f7f2;
+    /* background-color: #f8f7f2; */
  
-}
-input {
-    border-radius: 8px;
-    border-color: #9596bf;
-    padding: 3px; 
 }
 
 .btn-flat {
     padding-top: 60px;
-} */
+}
