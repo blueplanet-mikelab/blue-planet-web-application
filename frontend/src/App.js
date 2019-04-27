@@ -5,9 +5,9 @@ import Search from './Components/home/search';
 import Explore from './Pages/Explore';
 
 // import testing components
-import Register from './Components/register/register'
-import Login from './Components/login/login'
-import Dashboard from './Components/dashboard/dashboard'
+import Register from './Components/user/register'
+import Login from './Components/user/login'
+import Dashboard from './Components/user/dashboard'
 import PrivateRoute from './Components/private-route/privateRoute';
 import AddThread from './Components/thread/addThread';
 

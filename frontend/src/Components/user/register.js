@@ -7,7 +7,7 @@ import { registerUser } from '../../actions/authActions'
 import classnames from 'classnames'
 import countrylist from 'country-list';
 import '../../css/register.css';
-import Searchmini from '../../Components/home/minisearch';
+import Searchmini from '../home/minisearch';
 
 const Option = Select.Option;
 

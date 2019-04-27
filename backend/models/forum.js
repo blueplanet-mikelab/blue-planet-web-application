@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 var forumSchema = new Schema({
-    tile: {
+    title: {
         type: String,
         required: true
     },
@@ -21,7 +21,7 @@ var forumSchema = new Schema({
         type: String,
         required: true
     },
-    period: {
+    season: {
         type: String,
         required: true
     },
