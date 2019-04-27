@@ -22,10 +22,12 @@ class App extends Component {
 
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/add" component={AddThread} />
+          <Route exact path="/forum/add" component={AddThread} />
 
           <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              {/* <PrivateRoute exact path="/forum/add" component={AddThread} /> */}
+              {/* <PrivateRoute exact path="/forum/edit/:id" component={editThread} /> */}
           </Switch>
 
         </Router>

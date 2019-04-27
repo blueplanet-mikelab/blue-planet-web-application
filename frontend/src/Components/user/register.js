@@ -34,7 +34,6 @@ class Register extends Component {
         this.setState({
             country: value
         })
-        console.log(this.state.country)
     }
 
     componentWillReceiveProps(nextProps) {
