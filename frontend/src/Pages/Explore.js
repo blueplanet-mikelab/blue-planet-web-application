@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Season from '../Components/home/season';
-import Themes from '../Components/home/themes';
-import Area from '../Components/home/area';
-import Searchmini from '../Components/home/minisearch';
-import Duration from '../Components/home/duration';
+import Season from '../components/home/season';
+import Themes from '../components/home/themes';
+import Area from '../components/home/area';
+import Searchmini from '../components/home/minisearch';
+import Duration from '../components/home/duration';
 
 class Explore extends Component {
   render() {
