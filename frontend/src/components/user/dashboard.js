@@ -13,7 +13,7 @@ class Dashboard extends Component {
         const { user } = this.props.auth;
         return (
             <div className="col s12 center-align">
-                {/* <h4><b>Hey there,</b> {user.email.split(" ")[0]}</h4> */}
+                <h4><b>Hey there,</b> {user.email}</h4>
                 <button onClick={this.onLogoutClick}>Logout</button>
             </div>
         );

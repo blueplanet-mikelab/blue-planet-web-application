@@ -59,10 +59,11 @@ class AddThread extends Component {
         }
 
         this.props.addThread(newThread);
-        this.setState({
-            title: '',
-            desc: '',
-        })
+
+        // this.setState({
+        //     title: '',
+        //     desc: '',
+        // })
     }
 
     render() {
@@ -158,7 +159,7 @@ class AddThread extends Component {
 
 AddThread.propTypes = {
     addThread: PropTypes.func.isRequired,
-    thread: PropTypes.func.isRequired,
+    thread: PropTypes.array.isRequired,
     errors: PropTypes.object.isRequired
 };
 
