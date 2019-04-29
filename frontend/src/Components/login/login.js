@@ -55,12 +55,6 @@ class Login extends Component {
         return (
             <div>
                 <Searchmini />
-
-                <Link to="/" className="btn-flat waves-effect">Back to home</Link>
-                <p>
-                    Don't have an account?
-                    <Link to="/register">Register here</Link>
-                </p>
                 <h3>Login</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">

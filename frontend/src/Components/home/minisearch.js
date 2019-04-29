@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Select, DatePicker, Button, Input } from 'antd';
 import countrylist from 'country-list';
 import Background from '../../images/map.png';
+import Nav from '../../Components/navbar/navbar';
 
 
 const { MonthPicker } = DatePicker;
@@ -39,8 +40,9 @@ class Searchmini extends Component {
 
     render() {
         return (
-            <div style={{ backgroundImage: `url(${Background})`, height: 150 }}>
-                <div style={{ textAlign: 'center', paddingTop: '60px' }}>
+            <div style={{ backgroundImage: `url(${Background})`, height: 150, width:'100%' }}>
+            <Nav/>
+                <div style={{ textAlign: 'center', paddingTop: '50px'}}>
                     <Select
                         showSearch
                         style={{ width: 200 }}

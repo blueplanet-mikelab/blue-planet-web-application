@@ -4,9 +4,12 @@
     padding-top: 3px; 
     padding-bottom: 3px;
     /* background-color: #f8f7f2; */
- 
 }
 
 .btn-flat {
     padding-top: 60px;
+}
+
+.submitButton {
+    margin-bottom: 5%;
 }

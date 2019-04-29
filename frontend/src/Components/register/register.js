@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Tooltip, Icon, Checkbox, Select, Input } from 'antd';
-import { Link, withRouter } from "react-router-dom";
+import { Tooltip, Icon, Checkbox, Select, Input, Button } from 'antd';
+import {withRouter } from "react-router-dom";
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { registerUser } from '../../actions/authActions'
@@ -26,7 +26,7 @@ class Register extends Component {
             phoneNumber: '',
             errors: {}
         }
-     
+
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -79,11 +79,6 @@ class Register extends Component {
             <div >
                 <Searchmini />
                 <div className="register-container">
-                    <Link to="/" className="btn-flat waves-effect">Back to home</Link>
-                    <p>
-                        Already have an account?
-                    <Link to="/login">&nbsp;Log in</Link>
-                    </p>
                     <h3>Register</h3>
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
@@ -205,8 +200,12 @@ class Register extends Component {
                         <div>
                             <Checkbox>I have read the <a href="">agreement</a></Checkbox>
                         </div>
+
                         <div className="form-group">
-                            <input type="submit" value="Register" />
+                            <Button type="primary" className="submitButton">
+                                Register<Icon type="right" />
+                            </Button>
+                            {/* <input type="submit" value="Register" /> */}
                         </div>
                     </form>
                 </div>

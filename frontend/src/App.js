@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Search from './Components/home/search';
 import Explore from './Pages/Explore';
+import BasicMap from './Components/map/map'
 
 // import testing components
 import Register from './Components/register/register'
@@ -18,6 +19,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Search}/>
             <Route path="/explore" component={Explore}/>
+            <Route path="/map" component={BasicMap}/>
+
           </Switch>
 
           <Route exact path="/register" component={Register} />
