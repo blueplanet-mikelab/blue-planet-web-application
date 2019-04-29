@@ -41,7 +41,7 @@ router.post('/register', (req, res) => {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             residence: req.body.residence,
-            // country: req.body.country,
+            country: req.body.country,
             phoneNumber: req.body.phoneNumber
         });
 

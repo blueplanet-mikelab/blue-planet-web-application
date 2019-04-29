@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import classnames from 'classnames';
-import Searchmini from '../../Components/home/minisearch';
+import Searchmini from '../home/minisearch';
 
 class Login extends Component {
     constructor(props) {

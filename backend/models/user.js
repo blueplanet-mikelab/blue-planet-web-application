@@ -28,10 +28,10 @@ var userSchema = new Schema({
         type: String,
         required: true
     },
-    // country: {
-    //     type: String,
-    //     required: true
-    // },
+    country: {
+        type: String,
+        required: true
+    },
     phoneNumber: {
         type: Number,
         unique: true,

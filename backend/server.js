@@ -7,8 +7,10 @@ const passport = require('passport');
 const PORT = 4000;
 
 // Routes
-const exploreRoutes = require('./routes/explore')
 const userRoutes = require('./routes/user')
+const forumRoutes = require('./routes/forum')
+const exploreRoutes = require('./routes/explore')
+
 
 // Bodyparser middleware
 app.use(
@@ -34,5 +36,6 @@ app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
 });
 
-app.use('/explores', exploreRoutes)
 app.use('/users', userRoutes)
+app.use('/forums', forumRoutes)
+app.use('/explores', exploreRoutes)

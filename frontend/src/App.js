@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
-import Search from './Components/home/search';
+import Search from './components/home/search';
 import Explore from './Pages/Explore';
 import BasicMap from './Components/map/map'
 
 // import testing components
-import Register from './Components/register/register'
-import Login from './Components/login/login'
-import Dashboard from './Components/dashboard/dashboard'
-import PrivateRoute from './Components/private-route/privateRoute';
-import AddThread from './Components/thread/addThread';
+import Register from './components/user/register'
+import Login from './components/user/login'
+import Dashboard from './components/user/dashboard'
+import PrivateRoute from './components/private-route/privateRoute';
+import AddThread from './components/thread/addThread';
+import Forum from './components/thread/forum'
 
 class App extends Component {
   render() {
@@ -25,10 +26,13 @@ class App extends Component {
 
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/add" component={AddThread} />
+          <Route exact path="/forum/" component={Forum} />
+          <Route exact path="/forum/add" component={AddThread} />
 
           <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              {/* <PrivateRoute exact path="/forum/add" component={AddThread} /> */}
+              {/* <PrivateRoute exact path="/forum/edit/:id" component={editThread} /> */}
           </Switch>
 
         </Router>

@@ -63,7 +63,6 @@ class Duration extends Component {
     }
 
     createCard = () => {
-
         const { data } = this.state
 
         if (data.length === 0) {
@@ -71,7 +70,7 @@ class Duration extends Component {
         }
         // console.log(data)
         const topCountries = [...Array(10).keys()].map(function (i) {
-            return <div>{data[i].tags}<br /></div>
+            return <div>{data[i].countryEng}<br /></div>
         })
 
         let parent = []
@@ -80,7 +79,7 @@ class Duration extends Component {
             children.push(<Meta
                 key={i}
                 // title={}
-                title= {data[i].tags}
+                title= {data[i].countryEng}
             />)
             parent.push(<Card
                 key={i}
@@ -98,7 +97,6 @@ class Duration extends Component {
 
         return (
             <div style={{ marginLeft: '110px', marginRight: '110px' }}>
-
                 <h4>Duration</h4>
                 {/* {topCountries} */}
                 <Slider marks={marks} step={null} defaultValue={0} />
