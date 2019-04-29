@@ -1,9 +1,10 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import ReduxPromise from 'redux-promise';
 import rootReducer from './reducers';
 
 const initialState = {};
-const middleware = [thunk];
+const middleware = [thunk, ReduxPromise];
 
 const store = createStore(
     rootReducer,

@@ -10,7 +10,7 @@ import Login from './components/user/login'
 import Dashboard from './components/user/dashboard'
 import PrivateRoute from './components/private-route/privateRoute';
 import AddThread from './components/thread/addThread';
-// import Forum from './components/thread/forum'
+import Forum from './components/thread/forum'
 
 class App extends Component {
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
 
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          {/* <Route exact path="/forum/" component={Forum} /> */}
+          <Route exact path="/forum/" component={Forum} />
           <Route exact path="/forum/add" component={AddThread} />
 
           <Switch>
