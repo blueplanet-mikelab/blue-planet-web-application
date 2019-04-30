@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
-import Search from './components/home/search';
 import Explore from './Pages/Explore';
 import BasicMap from './components/map/map'
 
