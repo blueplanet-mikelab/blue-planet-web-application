@@ -8,7 +8,7 @@ import Nav from '../../components/navbar/navbar';
 const { MonthPicker } = DatePicker;
 const Option = Select.Option;
 
-class Searchmini extends Component {
+class Search extends Component {
 
     constructor(props) {
         super(props)
@@ -40,7 +40,7 @@ class Searchmini extends Component {
 
     render() {
         return (
-            <div style={{ backgroundImage: `url(${Background})`, height: 150, width:'100%' }}>
+            <div>
             <Nav/>
                 <div style={{ textAlign: 'center', paddingTop: '50px'}}>
                     <Select
@@ -72,6 +72,6 @@ class Searchmini extends Component {
     }
 }
 
-export default Searchmini;
+export default Search;
 
 

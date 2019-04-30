@@ -4248,6 +4248,13 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
+flux-standard-action@^2.0.3:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/flux-standard-action/-/flux-standard-action-2.1.0.tgz#23713a545ee49d62bd067e77d63f8c691561c94c"
+  integrity sha512-9Gd5RIfxyvS33xfxRf/ePOBKcPe4BlMu6qg6aS+kieTcVLgn19O6t/n7TY2deT5L0uhUSFpJg2fq5BpUsShpfw==
+  dependencies:
+    lodash "^4.17.11"
+
 follow-redirects@^1.0.0, follow-redirects@^1.3.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
@@ -9062,6 +9069,14 @@ recursive-readdir@2.2.2:
   integrity sha512-nRCcW9Sj7NuZwa2XvH9co8NPeXUBhZP7CRKJtU+cS6PW9FpCIFoI5ib0NT1ZrbNuPoRy0ylyCaUL8Gih4LSyFg==
   dependencies:
     minimatch "3.0.4"
+
+redux-promise@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/redux-promise/-/redux-promise-0.6.0.tgz#c64723b5213bb5603c11b74302883b682e06b319"
+  integrity sha512-R2mGxJbPFgXyCNbFDE6LjTZhCEuACF54g1bxld3nqBhnRMX0OsUyWk77moF7UMGkUdl5WOAwc4BC5jOd1dunqQ==
+  dependencies:
+    flux-standard-action "^2.0.3"
+    is-promise "^2.1.0"
 
 redux-thunk@^2.3.0:
   version "2.3.0"
