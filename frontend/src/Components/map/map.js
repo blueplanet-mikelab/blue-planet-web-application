@@ -105,6 +105,12 @@ class BasicMap extends Component {
             </Geographies>
           </ZoomableGroup>
         </ComposableMap>
+        <Button 
+        shape="circle" 
+        icon="search" 
+        href="/explore" 
+        className="homeButton"
+        style={{marginLeft:'50%'}}/>
       </div>
 
     )

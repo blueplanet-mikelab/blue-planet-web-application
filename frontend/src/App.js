@@ -11,6 +11,7 @@ import Dashboard from './components/user/dashboard'
 import PrivateRoute from './components/private-route/privateRoute';
 import AddThread from './components/thread/addThread'
 import Forum from './components/thread/forum'
+import Filter from './components/thread/filter'
 
 class App extends Component {
   render() {
@@ -19,14 +20,15 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={BasicMap}/>
             <Route path="/explore" component={Explore}/>
-            <Route path="/map" component={BasicMap}/>
 
           </Switch>
 
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/forum/" component={Forum} />
+          <Route exact path="/forum" component={Forum} />
           <Route exact path="/forum/add" component={AddThread} />
+          <Route exact path="/forum/filter" component={Filter} />
+
 
           <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />

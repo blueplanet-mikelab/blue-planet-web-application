@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { getThreadList } from '../../actions/threadActions'
+import Filter from '../../components/thread/filter';
+import Searchmini from '../../components/home/minisearch';
 
 class Forum extends Component {
     constructor(props) {
@@ -26,6 +28,8 @@ class Forum extends Component {
     render() {
         return (
             <div>
+                <Searchmini/>
+                <Filter/>
                 {this.threadList()}
             </div>
         )
