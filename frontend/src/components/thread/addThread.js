@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Select, Radio, DatePicker, Button } from 'antd';
+import { Select, Radio, DatePicker, Button, Input } from 'antd';
 import { withRouter } from "react-router-dom";
 import countrylist from 'country-list';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addThread } from '../../actions/threadActions';
+import Searchmini from '../home/minisearch';
 
 const Option = Select.Option;
 
@@ -69,11 +70,12 @@ class AddThread extends Component {
     render() {
         return (
             <div>
+                <Searchmini/>
                 <h3>Create a thread</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 
                         <label>Title: </label>
-                        <input  
+                        <Input  
                             type="text"
                             id="title"
                             value={this.state.title}
@@ -82,7 +84,7 @@ class AddThread extends Component {
                     </div>
                     <div className="form-group"> 
                         <label>Description: </label>
-                        <input  
+                        <Input  
                             type="text"
                             id="desc"
                             value={this.state.desc}

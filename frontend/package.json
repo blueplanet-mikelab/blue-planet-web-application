@@ -12,6 +12,7 @@
     "jwt-decode": "^2.2.0",
     "moment": "^2.24.0",
     "next-redux-wrapper": "^3.0.0-alpha.2",
+    "randomcolor": "^0.5.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.1",

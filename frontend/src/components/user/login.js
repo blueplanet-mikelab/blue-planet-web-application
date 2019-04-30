@@ -5,7 +5,7 @@ import { loginUser } from '../../actions/authActions';
 import classnames from 'classnames';
 import Searchmini from '../home/minisearch';
 import {
-    Form, Icon, Input, Button, Checkbox,
+    Input, Button
 } from 'antd';
 
 class Login extends Component {
@@ -57,9 +57,9 @@ class Login extends Component {
         return (
             <div>
                 <Searchmini />
-                <h3>Login</h3>
+                <h3 style={{paddingLeft: "37%", paddingTop:"2%"}}>Login</h3>
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: "34%", paddingTop:"1%"}}>
                         <label>Email: </label>
                         <span className="red-text">{errors.email}{errors.emailnotfound}</span>
                         <Input style={{ width: '300px' }}
@@ -71,7 +71,7 @@ class Login extends Component {
                             error={errors.email}
                         />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: "32%", paddingTop:"1%"}}>
                         <label>Password: </label>
                         <span className="red-text">{errors.password}{errors.passwordincorrect}</span>
                         <Input style={{ width: '300px' }}
@@ -83,8 +83,9 @@ class Login extends Component {
                             error={errors.password}
                         />
                     </div>
-                    <div className="form-group">
-                        <input type="submit" value="Login" />
+                    <div className="form-group" style={{paddingLeft: "37%", paddingTop:"1%"}}>
+                        <Button value="Login">Submit</Button>
+                        {/* <Button type="dashed">Dashed</Button> */}
                     </div>
                 </form>
             </div>

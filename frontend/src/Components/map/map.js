@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Button } from 'antd';
+import { Button, Spin } from 'antd';
 import {
   ComposableMap,
   ZoomableGroup,
@@ -15,6 +15,8 @@ const wrapperStyles = {
   maxWidth: 980,
   margin: "0 auto",
 }
+var randomColor = require('randomcolor'); 
+var color = randomColor({hue: 'pink', count: 18});
 
 class BasicMap extends Component {
 
@@ -49,8 +51,9 @@ class BasicMap extends Component {
   render() {
     console.log(this.state)
     if (this.state.markedCountries.length === 0)
-      return <div><Button style={{ width: '120px',
-        height: '120px', border: '16px solid #f3f3f3' /* Light grey */}}shape="circle" loading /></div>
+      // return <div><Button style={{ width: '120px',
+      //   height: '120px', border: '16px solid #f3f3f3' /* Light grey */}}shape="circle" loading /></div>
+      return  <div><Spin size="large" /></div>
     return (
       <div style={wrapperStyles}>
       <Search/>
@@ -68,6 +71,7 @@ class BasicMap extends Component {
         >
           <ZoomableGroup center={[0, 20]} disablePanning>
             <Geographies geography={worldMap}>
+            
               {(geographies, projection) => geographies.map((geography, i) => (
                 <Geography
                   key={i}
@@ -75,7 +79,8 @@ class BasicMap extends Component {
                   projection={projection}
                   style={{
                     default: {
-                      fill: this.state.markedCountries.includes(geography.properties.name) ? `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})` : "#ECEFF1",
+                      // fill: this.state.markedCountries.includes(geography.properties.name) ? `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})` : "#ECEFF1",
+                      fill: this.state.markedCountries.includes(geography.properties.name) ? "#483D8B" : "#ECEFF1",
                       stroke: "#607D8B",
                       strokeWidth: 0.75,
                       outline: "none",
