@@ -71,27 +71,18 @@ class AddThread extends Component {
         return (
             <div>
                 <Searchmini/>
-                <h3>Create a thread</h3>
+                <h3 style={{paddingLeft: '25%'}}>Create a thread</h3>
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group"> 
+                    <div className="form-group" style={{paddingLeft: '26%', paddingBottom:'1%'}}> 
                         <label>Title: </label>
-                        <Input  
+                        <Input style={{width: '30%'}}
                             type="text"
                             id="title"
                             value={this.state.title}
                             onChange={this.onChange}
                         />
                     </div>
-                    <div className="form-group"> 
-                        <label>Description: </label>
-                        <Input  
-                            type="text"
-                            id="desc"
-                            value={this.state.desc}
-                            onChange={this.onChange}
-                        />
-                    </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: '24%', paddingBottom:'1%'}}>
                         Country :&nbsp;&nbsp;
                         <Select
                             showSearch
@@ -112,14 +103,14 @@ class AddThread extends Component {
                             )}
                         </Select> &nbsp;&nbsp;
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: '24%', paddingBottom:'1%'}}>
                         Location :&nbsp;&nbsp;
                         <Radio.Group>
                             <Radio value={1}>International Destinations</Radio>
                             <Radio value={2}>Destinations within Thailand</Radio>
                         </Radio.Group>        
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: '24%', paddingBottom:'1%'}}>
                         Duration :&nbsp;&nbsp;
                         <Select style={{ width: 200 }}
                                 placeholder="Please select duration"
@@ -129,7 +120,7 @@ class AddThread extends Component {
                             <Option value="type2">4-5</Option>
                         </Select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: '25%', paddingBottom:'1%'}}>
                         Season :&nbsp;&nbsp;
                         <Select style={{ width: 200 }}
                                 placeholder="Please select season"
@@ -139,7 +130,7 @@ class AddThread extends Component {
                             <Option value="type2">4-5</Option>
                         </Select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: '25%', paddingBottom:'1%'}}>
                         Budget :&nbsp;&nbsp;
                         <Select style={{ width: 200 }}
                                 placeholder="range of budget"
@@ -149,8 +140,17 @@ class AddThread extends Component {
                             <Option value="type2">4-5</Option>
                         </Select>
                     </div>
+                    <div className="form-group" style={{paddingLeft: '23%', paddingBottom:'1%'}}> 
+                        <label>Description: </label>
+                        <Input style={{width: '60%', height: '200px'}}
+                            type="text"
+                            id="desc"
+                            value={this.state.desc}
+                            onChange={this.onChange}
+                        />
+                    </div>
 
-                    <div className="form-group">
+                    <div className="form-group" style={{paddingLeft: '29%'}}>
                         <input type="submit" value="Add Thread" />
                     </div>
                 </form>
