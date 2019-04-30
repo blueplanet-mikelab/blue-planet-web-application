@@ -79,7 +79,7 @@ class Duration extends Component {
             children.push(<Meta
                 key={i}
                 // title={}
-                title= {data[i].countryEng}
+                title={data[i].countryEng}
             />)
             parent.push(<Card
                 key={i}
@@ -106,7 +106,10 @@ class Duration extends Component {
                             {this.createCard()}
                         </div>
                     </h3>   </div>
-                    <div><h3>2</h3></div>
+                    <div><h3>
+                        <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
+                            {this.createCard()}
+                        </div></h3></div>
                     <div><h3>3</h3></div>
                     <div><h3>4</h3></div>
                 </Carousel>,

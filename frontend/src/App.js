@@ -18,7 +18,7 @@ class App extends Component {
     return (
         <Router>
           <Switch>
-            <Route exact path="/" component={Search}/>
+            <Route exact path="/" component={BasicMap}/>
             <Route path="/explore" component={Explore}/>
             <Route path="/map" component={BasicMap}/>
 

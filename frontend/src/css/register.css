@@ -1,6 +1,6 @@
 .register-container {
-    margin-left:20%; 
-    margin-right: 20%; 
+    margin-left:25%; 
+    margin-right: 25%; 
     padding-top: 3px; 
     padding-bottom: 3px;
     /* background-color: #f8f7f2; */
@@ -11,5 +11,6 @@
 }
 
 .submitButton {
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }

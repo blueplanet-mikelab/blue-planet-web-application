@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Button } from 'antd';
 import {
   ComposableMap,
   ZoomableGroup,
@@ -48,7 +49,8 @@ class BasicMap extends Component {
   render() {
     console.log(this.state)
     if (this.state.markedCountries.length === 0)
-      return <div>Loading</div>
+      return <div><Button style={{ width: '120px',
+        height: '120px', border: '16px solid #f3f3f3' /* Light grey */}}shape="circle" loading /></div>
     return (
       <div style={wrapperStyles}>
       <Search/>
@@ -92,7 +94,9 @@ class BasicMap extends Component {
                     },
                   }}
                 />
+                
               ))}
+              
             </Geographies>
           </ZoomableGroup>
         </ComposableMap>

@@ -14,7 +14,6 @@ class Explore extends Component {
         <Duration />
         <Season />
         <Themes />
-
       </div>
 
     );

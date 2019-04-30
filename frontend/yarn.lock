@@ -1977,6 +1977,11 @@ binary-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.13.0.tgz#9523e001306a32444b907423f1de2164222f6ab1"
   integrity sha512-EgmjVLMn22z7eGGv3kcnHwSnJXmFHjISTY9E/S5lIcTD3Oxw05QTcBLNkJFzcb3cNueUdF/IN4U+d78V0zO8Hw==
 
+blacklist@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/blacklist/-/blacklist-1.1.4.tgz#b2dd09d6177625b2caa69835a37b28995fa9a2f2"
+  integrity sha1-st0J1hd2JbLKppg1o3somV+povI=
+
 bluebird@^3.5.1, bluebird@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
@@ -3418,6 +3423,11 @@ domhandler@^2.3.0:
   integrity sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
   dependencies:
     domelementtype "1"
+
+dompurify@^0.8.4:
+  version "0.8.9"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-0.8.9.tgz#fcec021f917b51f42a78af71d7875a7ba514fd64"
+  integrity sha1-/OwCH5F7UfQqeK9x14dae6UU/WQ=
 
 domutils@1.5.1:
   version "1.5.1"
@@ -5259,6 +5269,11 @@ is-directory@^0.3.1:
   resolved "https://registry.yarnpkg.com/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
   integrity sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
 
+is-dom@^1.0.5:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/is-dom/-/is-dom-1.0.9.tgz#483832d52972073de12b9fe3f60320870da8370d"
+  integrity sha1-SDgy1SlyBz3hK5/j9gMghw2oNw0=
+
 is-dotfile@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
@@ -6782,6 +6797,11 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
+
+next-redux-wrapper@^3.0.0-alpha.2:
+  version "3.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/next-redux-wrapper/-/next-redux-wrapper-3.0.0-alpha.2.tgz#ccbcd362e9998a9f582abcc8bfad665686d09cc4"
+  integrity sha512-mObX94qAq/1Wno2RF5pHGaH9ZnZ6+1nvjyC7KRRCfrD4AE1KtbavVAHZS48UkPXf25VwTZq98XjVC1qP1CYLTA==
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -9082,6 +9102,15 @@ redux-thunk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
   integrity sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==
+
+redux-tooltip@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/redux-tooltip/-/redux-tooltip-0.7.2.tgz#59d51bc0e65b67a0e6137a50aa2b4e851652d78f"
+  integrity sha1-WdUbwOZbZ6DmE3pQqitOhRZS148=
+  dependencies:
+    blacklist "^1.1.4"
+    dompurify "^0.8.4"
+    is-dom "^1.0.5"
 
 redux@^4.0.1:
   version "4.0.1"

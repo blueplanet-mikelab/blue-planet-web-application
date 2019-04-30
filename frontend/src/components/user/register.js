@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Tooltip, Icon, Checkbox, Select, Input, Button } from 'antd';
-import {withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { registerUser } from '../../actions/authActions'
@@ -80,11 +80,11 @@ class Register extends Component {
                 <div className="register-container">
                     <h3>Register</h3>
                     <form onSubmit={this.onSubmit}>
-                        <div className="form-group">
+                        <div className="form-group" style={{ paddingBottom: '2%', display: 'flex' }}>
                             <label>Email: </label>
                             <span className="red-text">{errors.email}</span>
-                            <Input type="email"
-
+                            <Input style={{ width: 230 }}
+                                type="email"
                                 id="email"
                                 className={classnames("", { invalid: errors.email })}
                                 value={this.state.email}
@@ -92,11 +92,11 @@ class Register extends Component {
                                 error={errors.email}
 
                             />
-                        </div>
-                        <div className="form-group">
+
                             <label>Password: </label>
                             <span className="red-text">{errors.password}</span>
-                            <Input type="password"
+                            <Input style={{ width: 220 }}
+                                type="password"
                                 id="password"
                                 className={classnames("", { invalid: errors.password })}
                                 value={this.state.password}
@@ -104,25 +104,26 @@ class Register extends Component {
                                 error={errors.password}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group" style={{ paddingBottom: '2%', display: 'flex', textAlign: 'center' }}>
                             <label>Confirm Password: </label>
                             <span className="red-text">{errors.password2}</span>
-                            <Input type="password"
+                            <Input style={{ width: 190 }}
+                                type="password"
                                 id="password2"
                                 className={classnames("", { invalid: errors.password2 })}
                                 value={this.state.password2}
                                 onChange={this.onChange}
                                 error={errors.password2}
                             />
-                        </div>
-                        <div className="form-group">
+
                             <label>Username </label>
                             <span className="red-text">{errors.username}</span>
                             <Tooltip title="What do you want others to call you?">
                                 <Icon type="question-circle-o" />
                             </Tooltip>
                             :&nbsp;
-                        <Input type="text"
+                        <Input style={{ width: 180 }}
+                                type="text"
                                 id="username"
                                 className={classnames("", { invalid: errors.username })}
                                 value={this.state.username}
@@ -130,21 +131,23 @@ class Register extends Component {
                                 error={errors.username}
                             />
                         </div>
-                        <div className="form-group">
+
+                        <div className="form-group" style={{ paddingBottom: '2%', display: 'flex', textAlign: 'center' }}>
                             <label>First name: </label>
                             <span className="red-text">{errors.firstName}</span>
-                            <Input type="text"
+                            <Input style={{ width: 220 }} 
+                            type="text"
                                 id="firstName"
                                 className={classnames("", { invalid: errors.firstName })}
                                 value={this.state.firstName}
                                 onChange={this.onChange}
                                 error={errors.firstName}
                             />
-                        </div>
-                        <div className="form-group">
+
                             <label>Last name: </label>
                             <span className="red-text">{errors.lastName}</span>
-                            <Input type="text"
+                            <Input style={{ width: 220 }} 
+                            type="text"
                                 id="lastName"
                                 className={classnames("", { invalid: errors.lastName })}
                                 value={this.state.lastName}
@@ -152,10 +155,11 @@ class Register extends Component {
                                 error={errors.lastName}
                             />
                         </div>
-                        <div className="form-group">
+
+                        {/* <div className="form-group" style={{ paddingBottom: '2%', textAlign: 'center' }}>
                             <label>Habitual Residence: </label>
                             <span className="red-text">{errors.residence}</span>
-                            <Input style={{ width: 400 }}
+                            <Input style={{ width: 500 }}
                                 type="text"
                                 id="residence"
                                 className={classnames("", { invalid: errors.residence })}
@@ -163,8 +167,8 @@ class Register extends Component {
                                 onChange={this.onChange}
                                 error={errors.residence}
                             />
-                        </div>
-                        <div className="form-group">
+                        </div> */}
+                        <div className="form-group" style={{ paddingBottom: '2%', display: 'flex', textAlign: 'center' }}>
                             <label>Country: </label>
                             <Select
                                 showSearch
@@ -184,11 +188,11 @@ class Register extends Component {
                                 )}
                             </Select>
                             <span className="red-text">{errors.country}</span>
-                        </div>
-                        <div className="form-group">
+
                             <label>Phone number: </label>
                             <span className="red-text">{errors.phoneNumber}</span>
-                            <Input type="tel"
+                            <Input style={{ width: 220 }} 
+                            type="tel"
                                 id="phoneNumber"
                                 className={classnames("", { invalid: errors.phoneNumber })}
                                 value={this.state.phoneNumber}
@@ -196,6 +200,7 @@ class Register extends Component {
                                 error={errors.phoneNumber}
                             />
                         </div>
+
                         <div>
                             <Checkbox>I have read the <a href="">agreement</a></Checkbox>
                         </div>

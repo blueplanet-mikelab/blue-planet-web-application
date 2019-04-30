@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 import classnames from 'classnames';
 import Searchmini from '../home/minisearch';
+import {
+    Form, Icon, Input, Button, Checkbox,
+} from 'antd';
 
 class Login extends Component {
     constructor(props) {
@@ -60,20 +62,22 @@ class Login extends Component {
                     <div className="form-group">
                         <label>Email: </label>
                         <span className="red-text">{errors.email}{errors.emailnotfound}</span>
-                        <input type="email"
-                                id="email"
-                                className={classnames("", {invalid: errors.email || errors.emailnotfound})}
-                                value={this.state.email}
-                                onChange={this.onChange}
-                                error={errors.email}
+                        <Input style={{ width: '300px' }}
+                            type="email"
+                            id="email"
+                            className={classnames("", { invalid: errors.email || errors.emailnotfound })}
+                            value={this.state.email}
+                            onChange={this.onChange}
+                            error={errors.email}
                         />
                     </div>
                     <div className="form-group">
                         <label>Password: </label>
                         <span className="red-text">{errors.password}{errors.passwordincorrect}</span>
-                        <input type="password"
+                        <Input style={{ width: '300px' }}
+                            type="password"
                             id="password"
-                            className={classnames("", {invalid: errors.password || errors.passwordincorrect})}
+                            className={classnames("", { invalid: errors.password || errors.passwordincorrect })}
                             value={this.state.password}
                             onChange={this.onChange}
                             error={errors.password}
@@ -98,7 +102,7 @@ const mapStateToProps = state => ({
     auth: state.auth,
     errors: state.errors
 });
-  
+
 export default connect(
     mapStateToProps,
     { loginUser }
