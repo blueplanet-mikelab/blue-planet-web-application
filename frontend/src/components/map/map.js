@@ -7,7 +7,7 @@ import {
   Geography,
 } from "react-simple-maps"
 import worldMap from './world-50m.json'
-import Search from '../../components/map/search';
+import Search from './search';
 import axios from 'axios';
 
 const wrapperStyles = {
@@ -15,6 +15,7 @@ const wrapperStyles = {
   maxWidth: 980,
   margin: "0 auto",
 }
+
 var randomColor = require('randomcolor'); 
 var color = randomColor({hue: 'pink', count: 18});
 
@@ -112,7 +113,6 @@ class BasicMap extends Component {
         className="homeButton"
         style={{marginLeft:'50%'}}/>
       </div>
-
     )
   }
 }
