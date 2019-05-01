@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import Explore from './Pages/Explore';
-import BasicMap from './components/map/map'
+import BasicMap from './components/map/map';
 
 // import testing components
 import Register from './components/user/register'
 import Login from './components/user/login'
 import Dashboard from './components/user/dashboard'
-import PrivateRoute from './components/private-route/privateRoute';
+import PrivateRoute from './components/private-route/privateRoute'
 import AddThread from './components/thread/addThread'
 import Forum from './components/thread/forum'
 import Filter from './components/thread/filter'
