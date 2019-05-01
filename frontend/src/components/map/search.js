@@ -62,7 +62,7 @@ class Search extends Component {
 
                     {/* <Input onChange={e => { this.setState({ input: e.target.value }) }} /> */}
 
-                    <Button icon="search" onClick={this.onClick} style={{ background: '#E26740', color: '#FFFFFF' }}>Explore</Button>
+                    <Button href="/forum" icon="search" onClick={this.onClick} style={{ background: '#E26740', color: '#FFFFFF' }}>Explore</Button>
                 </div>
             </div>
 
