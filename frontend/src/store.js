@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import ReduxPromise from 'redux-promise';
 import rootReducer from './reducers';
@@ -16,4 +16,16 @@ const store = createStore(
     )
     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
+// const appReducer = (state = initialState, action) => {
+//     switch (action.type) {
+//         default:
+//         return state
+//     }
+// }
+
+// export const initStore = (initState = { appReducer: initialState }) => {
+//     return createStore(combineReducers({ appReducer, tooltip }), initState)
+// }
+
 export default store;
