@@ -155,8 +155,7 @@ class Register extends Component {
                                 error={errors.lastName}
                             />
                         </div>
-
-                        {/* <div className="form-group" style={{ paddingBottom: '2%', textAlign: 'center' }}>
+                        <div className="form-group" style={{ paddingBottom: '2%', textAlign: 'center' }}>
                             <label>Habitual Residence: </label>
                             <span className="red-text">{errors.residence}</span>
                             <Input style={{ width: 500 }}
@@ -167,7 +166,7 @@ class Register extends Component {
                                 onChange={this.onChange}
                                 error={errors.residence}
                             />
-                        </div> */}
+                        </div>
                         <div className="form-group" style={{ paddingBottom: '2%', display: 'flex', textAlign: 'center' }}>
                             <label>Country: </label>
                             <Select

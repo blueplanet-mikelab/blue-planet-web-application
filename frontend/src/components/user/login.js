@@ -84,7 +84,8 @@ class Login extends Component {
                         />
                     </div>
                     <div className="form-group" style={{paddingLeft: "37%", paddingTop:"1%"}}>
-                        <Button value="Login">Submit</Button>
+                        <input type="submit" value="Login"/>
+                        {/* <Button value="Login">Submit</Button> */}
                         {/* <Button type="dashed">Dashed</Button> */}
                     </div>
                 </form>
