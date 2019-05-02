@@ -1,15 +1,12 @@
 import React, { Component } from "react"
 // import withRedux from "next-redux-wrapper"
 import { Button, Spin } from 'antd';
-import {
-  ComposableMap,
-  ZoomableGroup,
-  Geographies,
-  Geography,
-} from "react-simple-maps"
+import { ComposableMap, ZoomableGroup, Geographies, Geography } from "react-simple-maps"
 import worldMap from './world-50m.json'
 import Search from './search';
-import axios from 'axios';
+
+import { getTopCountries } from '../../actions/dataActions'
+
 
 // import {
 //   Tooltip,
@@ -69,16 +66,16 @@ class BasicMap extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get('/explores')
-      .then(result => this.setState({
-        data: result.data,
-        markedCountries: this.createTop(result.data)
-      }))
+    getTopCountries().then(res => {
+      this.setState({
+        data: res,
+        markedCountries: this.createTop(res)
+      })
+    })
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     if (this.state.markedCountries.length === 0)
       // return <div><Button style={{ width: '120px',
       //   height: '120px', border: '16px solid #f3f3f3' /* Light grey */}}shape="circle" loading /></div>
@@ -149,5 +146,3 @@ class BasicMap extends Component {
 }
 
 export default BasicMap
-
-// export default withRedux(initStore)(BasicMap)

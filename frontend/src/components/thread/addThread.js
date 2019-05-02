@@ -59,7 +59,7 @@ class AddThread extends Component {
             // budget: this.state.budget,
         }
 
-        this.props.addThread(newThread);
+        this.props.addThread(newThread, this.props.history);
 
         // this.setState({
         //     title: '',

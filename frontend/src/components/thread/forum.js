@@ -29,7 +29,7 @@ class Forum extends Component {
         return (
             <div>
                 <Searchmini/>
-                <Filter/>
+                {/* <Filter/> */}
                 {this.threadList()}
             </div>
         )

@@ -22,7 +22,7 @@ router.route('/:id').get(function(req, res) {
 router.route('/add').post(function(req, res) {
     collection
         .insert(req.body)
-        .then(forum => { res.send(200).json({'thread': 'thread added successfully'}) })
+        .then(forum => { res.send(200).json({ 'thread': 'thread added successfully' }) })
         .catch(err => { res.send(400).json('Adding thread failed') })
 })
 
