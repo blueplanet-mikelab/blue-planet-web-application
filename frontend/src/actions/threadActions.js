@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_ERRORS, ADD_THREAD, SHOW_THREAD } from '../actions/types'
+import { GET_ERRORS, ADD_THREAD } from '../actions/types'
 
 // Add thread
 export const addThread = threadData => dispatch => {

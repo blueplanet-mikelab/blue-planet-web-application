@@ -1,4 +1,4 @@
 module.exports = {
-    mongoURI: 'mongodb://127.0.0.1:27017/blueplanet',
+    mongoURI: 'mikestd:mikestd1q2w3e4r@mars.mikelab.net:27017/blueplanet_project',
     secretOrKey: 'secret'
 }

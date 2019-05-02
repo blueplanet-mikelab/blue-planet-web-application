@@ -206,10 +206,11 @@ class Register extends Component {
                         </div>
 
                         <div className="form-group">
-                            <Button type="primary" className="submitButton">
+                            {/* <Button type="primary" className="submitButton">
+                                <input type="submit"/>
                                 Register<Icon type="right" />
-                            </Button>
-                            {/* <input type="submit" value="Register" /> */}
+                            </Button> */}
+                            <input type="submit" value="Register" />
                         </div>
                     </form>
                 </div>
