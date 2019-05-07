@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Tooltip, Icon, Checkbox, Select, Input, Button } from 'antd';
+import { Tooltip, Icon, Select, Input, Button } from 'antd';
 import { withRouter } from "react-router-dom";
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { registerUser } from '../../actions/authActions'
 import classnames from 'classnames'
-import countrylist from 'country-list';
 import '../../css/register.css';
 import Searchmini from '../home/minisearch';
 
@@ -21,12 +20,8 @@ class Register extends Component {
             username: '',
             firstName: '',
             lastName: '',
-            residence: '',
-            country: '',
-            phoneNumber: '',
             errors: {}
         }
-
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -64,10 +59,7 @@ class Register extends Component {
             password2: this.state.password2,
             username: this.state.username,
             firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            residence: this.state.residence,
-            country: this.state.country,
-            phoneNumber: this.state.phoneNumber
+            lastName: this.state.lastName
         }
         this.props.registerUser(newUser, this.props.history);
     }
@@ -155,11 +147,6 @@ class Register extends Component {
                                 error={errors.lastName}
                             />
                         </div>
-
-                        <div>
-                            <Checkbox>I have read the <a href="">agreement</a></Checkbox>
-                        </div>
-
                         <div className="form-group">
                             {/* <Button type="primary" className="submitButton">
                                 <input type="submit"/>
