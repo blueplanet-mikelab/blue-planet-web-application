@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const keys = require('../config/keys');
 
 // Monk
-const db = require('monk')('mikestd:mikestd1q2w3e4r@mars.mikelab.net:27017/blueplanet_project',{ authSource:'admin' })
+const db = require('monk')(process.env.MONGODB_URI,{ authSource:'admin' })
 const collection = db.get('users')
 
 // Load input validation
