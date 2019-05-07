@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 import { Radio, Card, Carousel } from 'antd';
 import '../../css/season.css';
+import { getSmartData } from '../../actions/dataActions'
 
 const RadioGroup = Radio.Group;
 const { Meta } = Card;
 
 class Season extends Component {
-    state = {
-        value: 1,
+    constructor() {
+        super()
+        this.state = {
+            value: 1,
+            data: []
+        }
+    }
+
+    componentDidMount() {
+        getSmartData().then(res => {
+            this.setState({
+                data: res
+            })
+        })
     }
 
     onChange = (e) => {
@@ -17,17 +30,33 @@ class Season extends Component {
         });
     }
 
+    createCard = () => {
+        const { data } = this.state
+        if (data.length === 0) {
+            return ""
+        }
+        const seasonCountries = [...Array(5).keys()].map(function (i) {
+            return  <a href={data[i].link}>
+                <Card
+                key={i}
+                hoverable
+                style={{ width: 200, height: 190, marginRight: '10px' }}
+                cover={<img alt="example" src={data[i].thumbnail} />}
+                >
+                    ><Meta
+                    title={data[i].title}
+                    />
+                </Card>
+            </a>
+        })
+        return seasonCountries
+    }
+
 
     render() {
         return (
-
             <div style={{marginLeft: '120px', marginRight: '120px'}}>
-                <br />
-                <br />
-                <br />
-                Pick for each season
-                <br />
-                <br />
+                <h4>Pick for each season</h4>
                 <RadioGroup onChange={this.onChange} value={this.state.value}>
                     Select your month of Travel:&nbsp;&nbsp;&nbsp;&nbsp;
                     <Radio value={1}>Jan-Feb-Mar</Radio>
@@ -36,60 +65,10 @@ class Season extends Component {
                     <Radio value={4}>Oct-Nov-Dec</Radio>
                 </RadioGroup>
                 <br />
-
                 <Carousel effect="fade">
                     <div><h3>
                         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
-                            <Card
-                                hoverable
-                                style={{ width: 200, height: 190 }}
-                                cover={<img alt="example" src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/11/nara-park.jpg" />}
-                            >
-                                <Meta
-                                    title="Nara, Japan"
-                                // description="www.instagram.com"
-                                />
-                            </Card>,
-                <Card
-                                hoverable
-                                style={{ width: 200, height: 190 }}
-                                cover={<img alt="example" src="https://cdn.theculturetrip.com/wp-content/uploads/2015/11/Switzerland-%C2%A9-Boris-Stroujko-Shutterstock.jpg" />}
-                            >
-                                <Meta
-                                    title="Switzerland"
-                                // description="www.instagram.com"
-                                />
-                            </Card>,
-                <Card
-                                hoverable
-                                style={{ width: 200, height: 190 }}
-                                cover={<img alt="example" src="http://gotravelaz.com/wp-content/uploads/images/Rothenburg_25634.jpg" />}
-                            >
-                                <Meta
-                                    title="Germany"
-                                // description="www.instagram.com"
-                                />
-                            </Card>,
-                    <Card
-                                hoverable
-                                style={{ width: 200, height: 190 }}
-                                cover={<img alt="example" src="https://s-ec.bstatic.com/images/hotel/max400/166/166379438.jpg" />}
-                            >
-                                <Meta
-                                    title="Finland"
-                                // description="www.instagram.com"
-                                />
-                            </Card>,
-                    <Card
-                                hoverable
-                                style={{ width: 200, height: 190 }}
-                                cover={<img alt="example" src="https://s-ec.bstatic.com/images/hotel/max400/166/166379438.jpg" />}
-                            >
-                                <Meta
-                                    title="Finland"
-                                // description="www.instagram.com"
-                                />
-                            </Card>
+                            {this.createCard()}
                         </div>
                     </h3></div>
                     <div><h3>2</h3></div>

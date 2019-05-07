@@ -8,6 +8,7 @@ const PORT = 4000;
 const userRoutes = require('./routes/user')
 const forumRoutes = require('./routes/forum')
 const exploreRoutes = require('./routes/explore')
+const mapRoutes = require('./routes/map')
 
 // Bodyparser middleware
 app.use(
@@ -28,3 +29,4 @@ app.listen(PORT, function() {
 app.use('/users', userRoutes)
 app.use('/forums', forumRoutes)
 app.use('/explores', exploreRoutes)
+app.use('/maps', mapRoutes)
