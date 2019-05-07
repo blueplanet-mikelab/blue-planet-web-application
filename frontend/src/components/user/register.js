@@ -155,50 +155,6 @@ class Register extends Component {
                                 error={errors.lastName}
                             />
                         </div>
-                        <div className="form-group" style={{ paddingBottom: '2%', textAlign: 'center' }}>
-                            <label>Habitual Residence: </label>
-                            <span className="red-text">{errors.residence}</span>
-                            <Input style={{ width: 500 }}
-                                type="text"
-                                id="residence"
-                                className={classnames("", { invalid: errors.residence })}
-                                value={this.state.residence}
-                                onChange={this.onChange}
-                                error={errors.residence}
-                            />
-                        </div>
-                        <div className="form-group" style={{ paddingBottom: '2%', display: 'flex', textAlign: 'center' }}>
-                            <label>Country: </label>
-                            <Select
-                                showSearch
-                                style={{ width: 200 }}
-                                placeholder="Select a country"
-                                optionFilterProp="children"
-                                onChange={this.handleChange}
-                            >
-                                {countrylist.getNames().map(name =>
-                                    <Option key={name}
-                                        type="text"
-                                        id="country"
-                                        className={classnames("", { invalid: errors.country })}
-                                        value={name}
-                                        error={errors.country}
-                                    >{name}</Option>
-                                )}
-                            </Select>
-                            <span className="red-text">{errors.country}</span>
-
-                            <label>Phone number: </label>
-                            <span className="red-text">{errors.phoneNumber}</span>
-                            <Input style={{ width: 220 }} 
-                            type="tel"
-                                id="phoneNumber"
-                                className={classnames("", { invalid: errors.phoneNumber })}
-                                value={this.state.phoneNumber}
-                                onChange={this.onChange}
-                                error={errors.phoneNumber}
-                            />
-                        </div>
 
                         <div>
                             <Checkbox>I have read the <a href="">agreement</a></Checkbox>
