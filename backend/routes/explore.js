@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Monk
-const db = require('monk')('mikestd:mikestd1q2w3e4r@mars.mikelab.net:27017/blueplanet_project',{ authSource:'admin' })
+const db = require('monk')(process.env.MONGODB_URI,{ authSource:'admin' })
 const collection = db.get('smartData1')
 
 router.route('/').get((req, res) => {
