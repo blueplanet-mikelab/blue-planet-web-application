@@ -72,12 +72,12 @@ class Duration extends Component {
             return <Card
             key={i}
             hoverable
-            style={{ width: 200, height: 190, marginRight: '10px' }}
-            cover={<img alt="example" src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/11/nara-park.jpg" />}
+            style={{ width: "200px", height: "190px", marginRight: "10px" }}
+            cover={<img style={{height: "120px"}} alt="example" src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/11/nara-park.jpg" />}
             >
                 <Meta
                 key={i}
-                // title={data[i].countryEng}
+                title={data[i].countryEng}
                 />
             </Card>
         })
@@ -86,13 +86,13 @@ class Duration extends Component {
 
     render() {
         return (
-            <div style={{ marginLeft: '110px', marginRight: '110px' }}>
-                <h4>Duration</h4>
+            <div style={{ background: "#181741",marginLeft: '110px', marginRight: '110px' }}>
+                <h4 style={{color: "#FFFFFF"}} >Duration</h4>
                 <Slider marks={marks} step={null} defaultValue={0} />
                 <Carousel effect="fade">
                     <div><h3>
                         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
-                            {/* {this.createCard()} */}
+                            {this.createCard()}
                         </div>
                     </h3></div>
                     <div><h3>

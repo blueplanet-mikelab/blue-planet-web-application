@@ -41,7 +41,7 @@ class Season extends Component {
                 key={i}
                 hoverable
                 style={{ width: 200, height: 190, marginRight: '10px' }}
-                cover={<img alt="example" src={data[i].thumbnail} />}
+                cover={<img style={{height: "120px"}} alt="example" src={data[i].thumbnail} />}
                 >
                     ><Meta
                     title={data[i].title}
@@ -55,14 +55,14 @@ class Season extends Component {
 
     render() {
         return (
-            <div style={{marginLeft: '120px', marginRight: '120px'}}>
-                <h4>Pick for each season</h4>
-                <RadioGroup onChange={this.onChange} value={this.state.value}>
+            <div style={{marginLeft: '110px', marginRight: '110px', background: "#181741", color: "#FFFFFF"}}>
+                <h4 style={{color: "#FFFFFF"}}>Pick for each season</h4>
+                <RadioGroup style={{color: "#FFFFFF"}} onChange={this.onChange} value={this.state.value}>
                     Select your month of Travel:&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Radio value={1}>Jan-Feb-Mar</Radio>
-                    <Radio value={2}>Apr-May-Jun</Radio>
-                    <Radio value={3}>Jul-Aug-Sep</Radio>
-                    <Radio value={4}>Oct-Nov-Dec</Radio>
+                    <Radio style={{color: "#FFFFFF"}} value={1}>Jan-Feb-Mar</Radio>
+                    <Radio style={{color: "#FFFFFF"}} value={2}>Apr-May-Jun</Radio>
+                    <Radio style={{color: "#FFFFFF"}} value={3}>Jul-Aug-Sep</Radio>
+                    <Radio style={{color: "#FFFFFF"}} value={4}>Oct-Nov-Dec</Radio>
                 </RadioGroup>
                 <br />
                 <Carousel effect="fade">

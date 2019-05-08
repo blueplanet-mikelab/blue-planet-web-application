@@ -8,7 +8,7 @@ import Duration from '../components/home/duration';
 class Explore extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <Searchmini />
         <Area />
         <Duration />
