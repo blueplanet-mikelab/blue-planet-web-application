@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Slider, Card, Carousel } from 'antd';
 import '../../css/duration.css'
 import { getSmartData } from '../../actions/dataActions'
+import { duration } from 'moment';
 
 const { Meta } = Card;
 
@@ -63,21 +64,23 @@ class Duration extends Component {
     }
 
     createCard = () => {
-        const { data } = this.state
+        const data = this.state.data
+        const typeOne = data.filter(function(n) {return n.duration.type === 1})
         if (data.length === 0) {
             return ""
         }
+
         const durationCountries = [...Array(5).keys()].map(function (i) {
             // return <div>{data[i].countryEng}<br /></div>
             return <Card
             key={i}
             hoverable
-            style={{ width: "200px", height: "190px", marginRight: "10px" }}
-            cover={<img style={{height: "120px"}} alt="example" src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/11/nara-park.jpg" />}
+            style={{ width: "200px", height: "180px", marginRight: "5px", marginLeft: "5px", borderRadius: "8px"}}
+            cover={<img style={{height: "120px", borderRadius: "8px"}} alt="example" src={typeOne[i].thumbnail}/>}
             >
                 <Meta
                 key={i}
-                title={data[i].countryEng}
+                title={typeOne[i].title}
                 />
             </Card>
         })

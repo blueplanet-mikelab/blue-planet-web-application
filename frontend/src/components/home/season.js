@@ -40,8 +40,8 @@ class Season extends Component {
                 <Card
                 key={i}
                 hoverable
-                style={{ width: 200, height: 190, marginRight: '10px' }}
-                cover={<img style={{height: "120px"}} alt="example" src={data[i].thumbnail} />}
+                style={{ width: 200, height: 180, marginRight: '5px', marginLeft: '5px', borderRadius: "8px"}}
+                cover={<img style={{height: "120px", borderRadius: "8px"}} alt="example" src={data[i].thumbnail} />}
                 >
                     ><Meta
                     title={data[i].title}
