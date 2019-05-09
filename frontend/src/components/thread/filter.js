@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Checkbox, Icon, } from 'antd';
+import { Layout, Menu, Checkbox, Icon, Slider, InputNumber, Row, Col, } from 'antd';
 import '../../css/filter.css'
 
 const {
@@ -10,6 +10,7 @@ const SubMenu = Menu.SubMenu;
 class Filter extends Component {
     state = {
         collapsed: false,
+        inputValue: 1,
     };
 
     onCollapse = (collapsed) => {
@@ -21,7 +22,14 @@ class Filter extends Component {
         console.log(`checked = ${e.target.checked}`);
     }
 
+    changeBudget = (value) => {
+        this.setState({
+            inputValue: value,
+        });
+    }
+
     render() {
+        const { inputValue } = this.state;
         return (
             <div>
                 <Layout style={{ minHeight: '100vh' }}>
@@ -66,7 +74,25 @@ class Filter extends Component {
                                 key="sub4"
                                 title={<span><Icon type="team" /><span>Budget per Person</span></span>}
                             >
-                                <Menu.Item key="13"><Checkbox>?</Checkbox></Menu.Item>
+                                <Menu.Item key="13">
+                                   
+                                            <Slider
+                                                min={1}
+                                                max={500000}
+                                                onChange={this.changeBudget}
+                                                value={typeof inputValue === 'number' ? inputValue : 0}
+                                            />
+                                    
+                                </Menu.Item>  
+                                <Menu.Item key="14">
+                                <InputNumber
+                                                min={1}
+                                                max={500000}
+                                                style={{ marginLeft:3 }}
+                                                value={inputValue}
+                                                onChange={this.changeBudget}
+                                            />
+                                </Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Sider>
